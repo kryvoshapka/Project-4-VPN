@@ -641,6 +641,19 @@ h4 {
     border-radius: 10px;
 }
 
+@media (max-width: 1050px) {
+    .modal-inner {
+        width: calc(100% - 50px);
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 1000px) {
+    .modal-inner {
+        height: fit-content;
+    }
+}
+
 .close-modal {
     position: absolute;
     top: 15px;
@@ -677,6 +690,7 @@ h5 {
 .section-2 {
     position: relative;
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-between;
     width: calc(100% - 40px);
@@ -684,6 +698,12 @@ h5 {
     align-items: center;
     border-bottom: 1px solid lightgrey;
     margin: 0 auto;
+}
+
+@media (max-width: 1000px) {
+    .section-2 {
+        justify-content: center;
+    }
 }
 
 .subscription {
@@ -792,9 +812,16 @@ h5 {
     padding-top: 5px;
 }
 
+@media (max-width: 1000px) {
+    .section-2 label, .personal-ip {
+        margin-right: 20px;
+    }
+}
+
 .section-3 {
     position: relative;
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-between;
     width: calc(100% - 40px);
@@ -846,4 +873,14 @@ h5 {
 
 .total span {
     color: #2379c8;
+}
+
+@media (max-width: 1000px) {
+    .section-3 {
+        justify-content: center;
+    }
+
+    .section-3 label, .section-3 button, .payment {
+        margin-right: 20px;
+    }
 }
