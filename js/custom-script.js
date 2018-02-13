@@ -3,7 +3,20 @@ $(window).ready(function() {
    $('.burger').click(function() {
         $(this).toggleClass('fa-close fa-bars');
         $('nav').toggleClass('active');
-    });
+   });
+
+   $('nav a').click(function() {
+
+        if($(window).width() < 800) {
+            $('nav').toggleClass('active');
+            $('.burger').toggleClass('fa-close fa-bars');
+        }
+
+        var target = $(this).attr('nav a');
+        $('html, body').animate({scrollTop: $(target).offset().top}, 1000);
+
+        return false;
+   });
 
 
     var defaultCounterValue = 1;
